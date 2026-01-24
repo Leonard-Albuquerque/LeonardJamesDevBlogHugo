@@ -1,6 +1,17 @@
----
-baseUrl: "https://Leonard-Albuquerque.github.io/LeonardJamesDevBlogHugo/"
+baseURL: "https://Leonard-Albuquerque.github.io/LeonardJamesDevBlogHugo/"
+languageCode: "pt-br"
 title: "Leonard James Development Blog"
-draft: false
 theme: "PaperMod"
----
+
+params:
+  env: production
+
+  profileMode:
+    enabled: true
+    title: "Leonard James"
+    subtitle: "Desenvolvedor Full-stack Jr • Golang • TypeScript"
+    imageUrl: "/images/eu.jpeg"
+    imageTitle: "Leonard James"
+
+  mainSections:
+    - posts
