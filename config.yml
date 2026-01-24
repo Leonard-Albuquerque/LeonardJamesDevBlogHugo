@@ -6,12 +6,19 @@ theme: "PaperMod"
 params:
   env: production
 
-  profileMode:
-    enabled: true
-    title: "Leonard James"
-    subtitle: "Desenvolvedor Full-stack Jr • Golang • TypeScript"
-    imageUrl: "/images/eu.jpeg"
-    imageTitle: "Leonard James"
+  homeInfoParams:
+    Title: "Leonard James"
+    Content: >
+      Desenvolvedor Full-stack Jr, entusiasta de **Golang** e **TypeScript**.
+
+      Este blog é um espaço para documentar problemas reais
+      resolvidos no dia a dia como desenvolvedor.
+
+  socialIcons:
+    - name: Github
+      url: "https://github.com/Leonard-Albuquerque"
+    - name: Rss
+      url: "index.xml"
 
   mainSections:
     - posts
