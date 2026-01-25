@@ -1,6 +1,6 @@
 ---
 
-title: "Go: Structs como Valor ou Ponteiro (sem dor emocional)"
+title: "Go: Decida em 10s, Structs como Valor ou Ponteiro"
 date: 2024-05-24T11:30:03-03:00
 tags: ["golang", "estudos"]
 author: "Leonard James"

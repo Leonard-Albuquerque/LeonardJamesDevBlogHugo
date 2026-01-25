@@ -1,4 +1,12 @@
-# Bug no iOS Safari: input fixo duplicando no chat (scroll + teclado)
+---
+title: "Bug no iOS Safari: input fixo duplicando no chat (scroll + teclado)"
+date: 2024-06-02T10:15:00-03:00
+tags: ["frontend", "ios", "safari", "css", "mobile"]
+author: "Leonard James"
+showToc: true
+draft: false
+description: "Como resolvi o bug clássico do iOS Safari que duplica inputs fixos em chats quando o teclado está aberto."
+---
 
 Durante o desenvolvimento da tela de chat (estilo WhatsApp/Telegram), enfrentei um **bug clássico do iOS Safari** que causa **duplicação visual do layout**, especialmente do **campo de digitar mensagem**, quando o usuário faz scroll com o teclado aberto.
 

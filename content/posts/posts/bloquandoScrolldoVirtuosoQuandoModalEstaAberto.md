@@ -1,4 +1,12 @@
-# Bloqueando Scroll do Virtuoso quando Modal está Aberto
+---
+title: "Bloqueando scroll do react-virtuoso quando um modal está aberto"
+date: 2024-06-05T09:40:00-03:00
+tags: ["react", "nextjs", "ux", "react-virtuoso", "frontend"]
+author: "Leonard James"
+showToc: true
+draft: false
+description: "Estratégia simples usando pointer-events para bloquear o scroll do react-virtuoso quando um modal está ativo."
+---
 
 ## Problema
 
