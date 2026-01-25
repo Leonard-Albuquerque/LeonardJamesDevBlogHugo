@@ -1,6 +1,6 @@
 ---
 title: "Bloqueando scroll do react-virtuoso quando um modal está aberto"
-date: 2024-06-05T09:40:00-03:00
+date: 2024-06-22T09:40:00-03:00
 tags: ["react", "nextjs", "ux", "react-virtuoso", "frontend"]
 author: "Leonard James"
 showToc: true

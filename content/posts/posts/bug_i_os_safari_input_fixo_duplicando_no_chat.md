@@ -1,6 +1,6 @@
 ---
 title: "Bug no iOS Safari: Ao digitar, a tela fica com um extravasamento na parte inferior (scroll + teclado)"
-date: 2024-06-02T10:15:00-03:00
+date: 2026-01-10T10:15:00-03:00
 tags: ["frontend", "ios", "safari", "css", "mobile"]
 author: "Leonard James"
 showToc: true

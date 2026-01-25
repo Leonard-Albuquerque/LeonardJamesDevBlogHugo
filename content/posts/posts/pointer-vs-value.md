@@ -1,7 +1,7 @@
 ---
 
 title: "Go: Decida em 10s, Structs como Valor ou Ponteiro"
-date: 2024-05-24T11:30:03-03:00
+date: 2026-01-16T11:30:03-03:00
 tags: ["golang", "estudos"]
 author: "Leonard James"
 showToc: true
