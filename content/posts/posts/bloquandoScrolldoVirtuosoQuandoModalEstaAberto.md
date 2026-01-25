@@ -10,11 +10,15 @@ description: "Estratégia simples usando pointer-events para bloquear o scroll d
 
 ## Problema
 
-Quando usando `react-virtuoso` para renderizar listas virtualizadas em Next.js, abrir um modal de comentários permite que o usuário continue scrollando a lista por baixo do modal. Isso fornece uma experiência de usuário ruim.
+Quando usando `react-virtuoso` para renderizar listas virtualizadas em Next.js, abrir um modal de comentários permite que o usuário continue scrollando a lista por baixo do modal. 
+
+#### No meu caso gerou um bug no meu feed, mais pra um efeito colateral.
+
+Uma observação importante é que meu bloco do virtuoso e dos comentários foram feitos separados, o feed pertece ao virtuoso mas os comentários não. O por que isso é relevante? Simples, se a seção de comentários for acoplada dentro do virtoso, a própria lib faz a tarefa de lidar com o bloqueio do scrol no layer mais externo.
 
 ## Solução
 
-A solução é usar a propriedade CSS `pointerEvents` combinada com um estado global que rastreia se o modal está aberto.
+A solução é usar a propriedade CSS `pointerEvents` combinada com um estado global ou prop transportada do component pai até o filho/neto que rastreia se o modal está aberto.
 
 ## Implementação
 
@@ -53,7 +57,7 @@ const { profile, commentOnModal } = useBaseContext();
 </div>
 ```
 
-### 3. Gerenciar o estado global
+### 3. Gerenciar o estado global (mais simples de exemplificar aqui)
 
 No seu `BaseContext`, certifique-se de ter:
 
@@ -101,3 +105,6 @@ Quando `commentOnModal` é `true` (modal fechado):
 ✅ Funciona em todos os navegadores  
 ✅ Sem quebra de funcionalidade (inputs e botões funcionam normalmente)  
 ✅ Compatível com `react-virtuoso`
+
+
+E pronto tudo certo, espero que lhe tenha sido útil!

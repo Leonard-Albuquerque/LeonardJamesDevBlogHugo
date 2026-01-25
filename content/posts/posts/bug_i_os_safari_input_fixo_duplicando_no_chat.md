@@ -1,11 +1,11 @@
 ---
-title: "Bug no iOS Safari: input fixo duplicando no chat (scroll + teclado)"
+title: "Bug no iOS Safari: Ao digitar, a tela fica com um extravasamento na parte inferior (scroll + teclado)"
 date: 2024-06-02T10:15:00-03:00
 tags: ["frontend", "ios", "safari", "css", "mobile"]
 author: "Leonard James"
 showToc: true
 draft: false
-description: "Como resolvi o bug clássico do iOS Safari que duplica inputs fixos em chats quando o teclado está aberto."
+description: "Como resolvi o bug clássico do iOS Safari que duplica inputs fixos ou gera uma seção fantasma em chats quando o teclado está aberto."
 ---
 
 Durante o desenvolvimento da tela de chat (estilo WhatsApp/Telegram), enfrentei um **bug clássico do iOS Safari** que causa **duplicação visual do layout**, especialmente do **campo de digitar mensagem**, quando o usuário faz scroll com o teclado aberto.
@@ -67,7 +67,7 @@ Ou seja:
 
 ---
 
-## ✅ Solução adotada (simples e eficiente)
+## ✅ Solução Sugerida
 
 Ao invés de tentar brigar com o cálculo de viewport do Safari, a solução foi **fechar o teclado automaticamente quando o usuário tenta scrollar o chat**.
 
@@ -77,7 +77,7 @@ Ao invés de tentar brigar com o cálculo de viewport do Safari, a solução foi
 - Se existir um input focado → remover o foco (`blur()`)
 - O teclado fecha
 - O Safari volta ao estado normal
-- O layout para de duplicar
+- O layout para de duplicar ou gerar a extensão mal calculada do body 
 
 ---
 
@@ -142,24 +142,9 @@ useEffect(() => {
 
 ---
 
-## 🧩 Conclusão
+**Adendo :**
 
-Esse é um daqueles bugs clássicos onde:
-
-- O problema **não é seu código**
-- O problema **não é o framework**
-- O problema é o navegador
-
-Em vez de forçar CSS complexo ou gambiarras com viewport, **fechar o teclado no scroll** se mostrou a solução mais estável e previsível para chats no iOS Safari.
-
-Se você está construindo um chat, feed ou formulário com input fixo no rodapé:
-
-👉 **considere esse padrão desde o início**.
+A maioria dos sites que eu peguei, apresentavam esse problema no SAFARI, e basicamente, não é como se dificultasse a usuabilidade, mas o UX fica meio estranho se for um usuário mais cricri que gosta de fuçar. Bem, espero que isso resolva o problema para  quem quer que  chegue a ler esse artigo. 
 
 ---
-
-Se quiser, no próximo post posso documentar:
-- diferenças entre `vh`, `svh`, `dvh`
-- quando usar `position: fixed` vs `sticky`
-- arquitetura ideal de chat para mobile
 

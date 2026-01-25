@@ -90,7 +90,7 @@ params:
 menu:
   main:
     - identifier: home
-      name: Home
+      name: Início
       url: /
       weight: 1
     - identifier: posts
@@ -101,14 +101,14 @@ menu:
       name: Tags
       url: /tags/
       weight: 20
-    - identifier: about
-      name: Sobre
-      url: /about/
-      weight: 30
+ 
 
 # === Syntax Highlight (Chroma) ===
 pygmentsUseClasses: true
 markup:
+  goldmark:
+    renderer:
+      unsafe: true
   highlight:
     noClasses: false
     style: monokai
