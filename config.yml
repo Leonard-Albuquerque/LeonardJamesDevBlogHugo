@@ -3,8 +3,43 @@ languageCode: "pt-br"
 title: "Leonard James Development Blog"
 theme: "PaperMod"
 
+pagination:
+  pagerSize: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
 params:
   env: production
+
+  title: Leonard James
+  description: "Desenvolvedor Full-stack Jr, entusiasta de Golang e TypeScript"
+  keywords: [Blog, Desenvolvimento, Golang, Go, TypeScript, Full-stack]
+  author: Leonard James
+  DateFormat: "2 de Janeiro de 2006"
+
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  # === Configurações de Post ===
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  UseHugoToc: true
+
+  # === Layout da Home ===
+  # profileMode DESATIVADO para exibir homeInfo + lista de posts
+  profileMode:
+    enabled: false
 
   homeInfoParams:
     Title: "Leonard James"
@@ -12,13 +47,68 @@ params:
       Desenvolvedor Full-stack Jr, entusiasta de **Golang** e **TypeScript**.
 
       Este blog é um espaço para documentar problemas reais
-      resolvidos no dia a dia como desenvolvedor.
-
-  socialIcons:
-    - name: Github
-      url: "https://github.com/Leonard-Albuquerque"
-    - name: Rss
-      url: "index.xml"
+      resolvidos no dia a dia como desenvolvedor, além de estudos
+      técnicos mais aprofundados.
 
   mainSections:
     - posts
+
+  # === Redes Sociais ===
+  socialIcons:
+    - name: github
+      url: "https://github.com/Leonard-Albuquerque"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/devleonardalbuquerque/"
+    - name: email
+      url: "mailto:jamesxalbuquerque@gmail.com"
+    - name: rss
+      url: "index.xml"
+
+  # === Header ===
+  label:
+    text: "Leonard James"
+    iconHeight: 35
+    # icon: /images/eu.jpeg # opcional
+
+  # === Covers ===
+  cover:
+    hidden: true
+    hiddenInList: true
+    hiddenInSingle: false
+
+  # === Busca (Fuse.js) ===
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+    - identifier: about
+      name: Sobre
+      url: /about/
+      weight: 30
+
+# === Syntax Highlight (Chroma) ===
+pygmentsUseClasses: true
+markup:
+  highlight:
+    noClasses: false
+    style: monokai
